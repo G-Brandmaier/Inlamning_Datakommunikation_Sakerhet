@@ -1,0 +1,15 @@
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\bin\Debug\net7.0\Server_Side.exe
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\bin\Debug\net7.0\Server_Side.deps.json
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\bin\Debug\net7.0\Server_Side.runtimeconfig.json
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\bin\Debug\net7.0\Server_Side.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\bin\Debug\net7.0\Server_Side.pdb
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.csproj.AssemblyReference.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.AssemblyInfoInputs.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.AssemblyInfo.cs
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.csproj.CoreCompileInputs.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\refint\Server_Side.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.pdb
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\Server_Side.genruntimeconfig.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Uppgift_1\Server_Side\Server_Side\obj\Debug\net7.0\ref\Server_Side.dll
