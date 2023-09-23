@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Udp_Client.Classes;
 
+//Class for the weather data that we want to set and send to the udp listener
 public class WeatherData
 {
     public WeatherData(string forecast, int maxTemperature, int minTemperature, string date, string time)
