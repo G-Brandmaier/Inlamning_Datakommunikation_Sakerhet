@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Udp_Client_1/1.0.0": {
+        "runtime": {
+          "Udp_Client_1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Udp_Client_1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
