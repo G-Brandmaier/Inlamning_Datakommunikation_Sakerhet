@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Client_Side.Classes;
 
+//Setting up the class for the data we want to send in our tcp client
 public class Weather
 {
     public Weather(string forecast, int maxTemperature, int minTemperature, string date, string time)
