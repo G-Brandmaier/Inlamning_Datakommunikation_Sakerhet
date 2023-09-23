@@ -1,0 +1,15 @@
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\bin\Debug\net7.0\Udp_Client_1.exe
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\bin\Debug\net7.0\Udp_Client_1.deps.json
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\bin\Debug\net7.0\Udp_Client_1.runtimeconfig.json
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\bin\Debug\net7.0\Udp_Client_1.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\bin\Debug\net7.0\Udp_Client_1.pdb
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.csproj.AssemblyReference.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.AssemblyInfoInputs.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.AssemblyInfo.cs
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.csproj.CoreCompileInputs.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\refint\Udp_Client_1.dll
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.pdb
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\Udp_Client_1.genruntimeconfig.cache
+C:\Users\gabbi\OneDrive\Skrivbord\Nackademin\Datakommunikation_Sakerhet\Inlamningsuppgifter\Uppgift_2\Udp_Client_1\Udp_Client_1\obj\Debug\net7.0\ref\Udp_Client_1.dll
