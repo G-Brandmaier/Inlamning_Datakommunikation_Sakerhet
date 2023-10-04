@@ -41,10 +41,8 @@ internal class Program
         }
         catch (Exception ex)
         {
-            //Message for the user that there was an error
             Console.WriteLine("Something went wrong!");
             Console.WriteLine(ex.Message);
-
         }
     }
 }
