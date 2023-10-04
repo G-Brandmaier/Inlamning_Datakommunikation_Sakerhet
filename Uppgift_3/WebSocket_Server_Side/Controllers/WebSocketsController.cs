@@ -34,7 +34,7 @@ public class WebSocketsController : ControllerBase
         var buffer = new byte[1024 * 4];
         var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
 
-        while(!result.CloseStatus.HasValue)
+        while (!result.CloseStatus.HasValue)
         {
             var serverMessage = Encoding.UTF8.GetBytes($"Data received from client: {Encoding.UTF8.GetString(buffer, 0, result.Count)}");
 
