@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "VMBrd4DNEDwuXql0VlCiXtHpVuqMgUITBPlGOaWDY9ZFMfKox0xR51j9y7s0zVq+89ACgvdwOVBTEr8Nj7/INQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gabbi\\OneDrive\\Skrivbord\\Nackademin\\Datakommunikation_Sakerhet\\Inlamningsuppgifter\\Uppgift_3\\WebSocket_Server_Side\\WebSocket_Server_Side.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
