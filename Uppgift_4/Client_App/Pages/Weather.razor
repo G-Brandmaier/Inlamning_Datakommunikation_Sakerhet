@@ -1,0 +1,168 @@
+﻿@page "/weather"
+@inject NavigationManager navManager;
+@implements IAsyncDisposable
+@inject TokenService tokenService
+
+
+<PageTitle>Weather</PageTitle>
+
+@if(IsLoggedIn == true)
+{
+    if (IsConnected)
+    {
+        <div class="container-weather">
+            <div class="weather-section">
+                @if (IsLoading == false)
+                {
+                    <h2>@weather!.Temperature °C</h2>
+                    <p>@weather.City, @weather.Country</p>
+                    <p>@weather.Forecast</p>
+                    <p>Max: @weather.MaxTemperature °C Min: @weather.MinTemperature °C</p>
+                }
+                else
+                {
+                    <h4>@loading</h4>
+                }
+            </div>
+            <div class="comments-section">
+                <div class="comments">
+                    <h5>Comment section</h5>
+                    <ul>
+                        @foreach (var msg in messages)
+                        {
+                            <li>@msg</li>
+                        }
+                    </ul>
+                </div>
+                <div class="add-comments-section">
+                    <label>Add a comment</label>
+                    <input @bind-value=@message disabled="@(IsAdmin != true ? true : false)" />
+                    <button @onclick="SendComment" disabled="@(IsAdmin != true ? true : false)">Comment</button>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <h4>No connection, please try again later!</h4>
+    }
+}
+
+
+
+
+
+
+@code {
+    private HubConnection? hubConnection;
+    private WeatherDto? weather = new WeatherDto();
+    private List<string> messages = new List<string>();
+    private string message = string.Empty;
+    private bool IsAdmin = false;
+    private bool IsLoggedIn = false;
+    private bool IsLoading = true;
+    private string loading = "Loading data...";
+
+    /// <summary>
+    /// When page is initialized a token is checked for and validated.
+    /// If token is valid the user is loged in and a connection to the WeatherHub is setup.
+    /// The application will receive data from the hub on subscriptions ReceiveWeatherData and ReceiveMessage, and display to the user.
+    /// If token is not valid the user will be redirected to the home page to log in.
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var token = await CheckToken();
+            if(!string.IsNullOrEmpty(token))
+            {
+                hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7235/weatherhub", options =>
+                {
+                    options.AccessTokenProvider = () => Task.FromResult(token)!;
+                }).WithAutomaticReconnect().Build();
+
+                hubConnection.On<string>("ReceiveWeatherData", (data) =>
+                {
+                    Console.WriteLine(data);
+                    weather = JsonSerializer.Deserialize<WeatherDto>(data)!;
+                    IsLoading = false;
+                    StateHasChanged();
+                });
+                hubConnection.On<string>("ReceiveMessage", (message) =>
+                {
+                    messages.Add(message);
+                    StateHasChanged();
+                });
+
+                hubConnection.Reconnected += (error) =>
+                {
+                    messages.Add("Reconnected!");
+                    Console.WriteLine(error);
+                    return Task.CompletedTask;
+                };
+
+                await hubConnection.StartAsync();
+            }
+            else
+            {
+                navManager.NavigateTo("/");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            messages.Add("Something went wrong, no connection found!");
+        }
+
+    }
+
+    public bool IsConnected => hubConnection?.State == HubConnectionState.Connected;
+
+    public async ValueTask DisposeAsync()
+    {
+        if(hubConnection != null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+    /// <summary>
+    /// Checks if token is valid.
+    /// If valid user is logged in nd a role is extracted from the token and the token is returned.
+    /// If not valid a empty string is returned.
+    /// </summary>
+    public async Task<string> CheckToken()
+    {
+        var token = await tokenService.CheckTokenValid();
+
+        if (!string.IsNullOrEmpty(token))
+        {
+            IsLoggedIn = true;
+            var role = tokenService.CheckRole(token);
+            if (role == "admin")
+            {
+                IsAdmin = true;
+            }
+            return token;
+        }
+        return string.Empty;
+    }
+
+    /// <summary>
+    /// Sends a message written by the user to the connected hub.
+    /// </summary>
+    public async Task SendComment()
+    {
+        try
+        {
+            await hubConnection!.SendAsync("SendMessage", message);
+            message = "";
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            messages.Add("Something went wrong, could not send message");
+        }
+
+    }
+}

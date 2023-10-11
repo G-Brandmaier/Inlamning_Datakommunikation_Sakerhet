@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "LoW6Ubuic/6bkQVm9mi0uNB/grxRY/5h/WX9uti2umbMnmeLN3DKeHRLubhK+sV9TsX1lBNo1gLDyXE1mkv+eA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gabbi\\OneDrive\\Skrivbord\\Nackademin\\Datakommunikation_Sakerhet\\Inlamningsuppgifter\\Uppgift_4\\Client_Console\\Client_Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.11\\microsoft.aspnetcore.connections.abstractions.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.11\\microsoft.aspnetcore.http.connections.client.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\7.0.11\\microsoft.aspnetcore.http.connections.common.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\7.0.11\\microsoft.aspnetcore.signalr.client.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\7.0.11\\microsoft.aspnetcore.signalr.client.core.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\7.0.11\\microsoft.aspnetcore.signalr.common.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\7.0.11\\microsoft.aspnetcore.signalr.protocols.json.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.features\\7.0.11\\microsoft.extensions.features.7.0.11.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\gabbi\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
