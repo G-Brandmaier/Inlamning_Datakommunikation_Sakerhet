@@ -7,8 +7,7 @@ using System.Text;
 namespace Api_Hub.Services;
 
 /// <summary>
-/// AccountService class for handeling the login logic and distribution of token.
-/// Login method checks if the email and password matches any in the list of valid users, if it does claims and an expire date/time are sent to the GenerateToken method which generates and returns the token. Login method then sends it back to the one making the login request.
+/// Service class for handeling login validation and generating token.
 /// </summary>
 public class AccountService
 {
@@ -42,7 +41,7 @@ public class AccountService
     }
 
     /// <summary>
-    /// Execute the log in logic, validate if the information provided in UserDto is matching any from the list.
+    /// Execute the login logic, validate if the information provided in UserDto is matching any from the list.
     /// If validation succeeded Claims are set and a token is generated with these calims.
     /// Returns token if validation succeeded, otherwise returns null.
     /// </summary>

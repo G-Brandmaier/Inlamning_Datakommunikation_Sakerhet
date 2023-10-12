@@ -3,9 +3,7 @@
 @implements IAsyncDisposable
 @inject TokenService tokenService
 
-
 <PageTitle>Weather</PageTitle>
-
 @if(IsLoggedIn == true)
 {
     if (IsConnected)
@@ -21,12 +19,12 @@
                 }
                 else
                 {
-                    <h4>@loading</h4>
+                    <h4>@loading &#9925;</h4>
                 }
             </div>
+            <h5 class="commets-head-text">Comment section</h5>
             <div class="comments-section">
                 <div class="comments">
-                    <h5>Comment section</h5>
                     <ul>
                         @foreach (var msg in messages)
                         {
@@ -48,11 +46,6 @@
     }
 }
 
-
-
-
-
-
 @code {
     private HubConnection? hubConnection;
     private WeatherDto? weather = new WeatherDto();
@@ -61,11 +54,11 @@
     private bool IsAdmin = false;
     private bool IsLoggedIn = false;
     private bool IsLoading = true;
-    private string loading = "Loading data...";
+    private string loading = "Loading clouds...";
 
     /// <summary>
     /// When page is initialized a token is checked for and validated.
-    /// If token is valid the user is loged in and a connection to the WeatherHub is setup.
+    /// If token is valid the user is logged in and a connection to the WeatherHub is setup.
     /// The application will receive data from the hub on subscriptions ReceiveWeatherData and ReceiveMessage, and display to the user.
     /// If token is not valid the user will be redirected to the home page to log in.
     /// </summary>
@@ -83,7 +76,6 @@
 
                 hubConnection.On<string>("ReceiveWeatherData", (data) =>
                 {
-                    Console.WriteLine(data);
                     weather = JsonSerializer.Deserialize<WeatherDto>(data)!;
                     IsLoading = false;
                     StateHasChanged();
@@ -155,7 +147,7 @@
     {
         try
         {
-            await hubConnection!.SendAsync("SendMessage", message);
+            await hubConnection!.SendAsync("SendAdminMessage", message);
             message = "";
         }
         catch(Exception ex)

@@ -2,6 +2,9 @@
 
 namespace Api_Hub.Models;
 
+/// <summary>
+/// Is used for receiving data when a post request for login is called.
+/// </summary>
 public class UserDto
 {
     [EmailAddress]

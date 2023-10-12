@@ -32,13 +32,13 @@ builder.Services.AddAuthentication(x =>
 {
     x.Events = new JwtBearerEvents
     {
-        //OnTokenValidated = context =>
-        //{
-        //    if (string.IsNullOrEmpty(context?.Principal?.FindFirst("id")?.Value) || string.IsNullOrEmpty(context?.Principal?.Identity?.Name))
-        //        context?.Fail("Unauthorized");
+        OnTokenValidated = context =>
+        {
+            if (string.IsNullOrEmpty(context?.Principal?.FindFirst("id")?.Value) || string.IsNullOrEmpty(context?.Principal?.Identity?.Name))
+                context?.Fail("Unauthorized");
 
-        //    return Task.CompletedTask;
-        //},
+            return Task.CompletedTask;
+        },
         OnMessageReceived = context =>
         {
             var accessToken = context.Request.Query["access_token"];

@@ -9,6 +9,11 @@ public class WeatherData
     public int MaxTemperature { get; set; }
     public int MinTemperature { get; set; }
 
+
+    /// <summary>
+    /// When an instance of WeatherData is made this is the default values.
+    /// Parameter Temperature is generated with a new value each time an istance is made.
+    /// </summary>
     public WeatherData()
     {
         Forecast = "Cloudy with 20% chance of rain";

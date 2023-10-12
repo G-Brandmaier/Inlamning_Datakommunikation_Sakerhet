@@ -7,27 +7,28 @@ using System.Text.Json;
 namespace Api_Hub.Hubs;
 
 /// <summary>
-/// Hub class for receiving data and broadcast it to the clients/subscribers.
-/// SendData method is for receivig data from the Iot-client that provides weather data and broadcast it to all clients.
-/// SendMessage method can only be called from those with an admin role from the web-application where you login and broadcasts to all clients.
-/// Decrypt method is for decrypting the data from the Iot-client that sends the weather data. It receives a jsonstring object that contains the data and the iv then converts it in to an EncryptedDataDto object where we can select the needed data for the decryption. Lastly we send only the decrypted  weather data back to the SendData method which gets broadcasted.
+/// SignalR hub for receiving and broadcast data to users.
 /// </summary>
 public class WeatherHub : Hub
 {
-    //When connection is made this message will be sent to all clients
+    /// <summary>
+    /// Different methods for sending data to subscribed clients.
+    /// OnConnectAsync: When connection is made this message will be sent to all clients.
+    /// SenMessage: Send messages to all clients that subscribed to ReceiveMessage.
+    /// SendWeatherData: Sends weather data to all clients subscribed to ReceiveData, expects to get string to decrypt data from.
+    /// SendAdminMessage: Sends messages to all clients subscribed to ReceivMessage but can only be invoked by a logged in user with admin role.
+    /// </summary>
     public override async Task OnConnectedAsync()
     {
-        await SendHubMessage("Connected");
+        await SendMessage("Connected");
     }
-    //Send messages for the hub to all clients that subscribes in ReceiveMessage
-    public async Task SendHubMessage(string message)
+    public async Task SendMessage(string message)
     {
         if(!string.IsNullOrEmpty(message))
         {
             await Clients.All.SendAsync("ReceiveMessage", message);
         }
     }
-    //Sends weather data to all clients subscribed to ReceiveData, expects to get string to decrypt data from
     public async Task SendWeatherData(string data)
     {
         if(!string.IsNullOrEmpty(data))
@@ -36,14 +37,11 @@ public class WeatherHub : Hub
             await Clients.All.SendAsync("ReceiveWeatherData", decryptedData);
         }
     }
-
-    //Sends messages to all clients subscribed to ReceivMessage but can only be invoked by a logged in user with admin role.
     [Authorize(Policy = "RequireAdminRole")]
-    public async Task SendMessage(string message)
+    public async Task SendAdminMessage(string message)
     {
         if (!string.IsNullOrEmpty(message))
         {
-            Console.WriteLine(message);
             await Clients.All.SendAsync("ReceiveMessage", message);
         }
     }

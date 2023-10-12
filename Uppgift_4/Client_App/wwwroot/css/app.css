@@ -107,9 +107,11 @@ a, .btn-link {
 }
 
 .log-in-form button{
-    margin-top: 30px;
+    margin-top: 20px;
 }
-
+#error-message{
+    margin:0px;
+}
 .logged-in {
     margin-top: 20px;
     justify-content: center;
@@ -118,9 +120,15 @@ a, .btn-link {
 }
 .logged-in a{
     text-decoration: none;
-    color: darksalmon;
-    font-size: 1.3em;
+    color: darkslateblue;
+    font-size: 2em;
+    margin-top: 20px;
 }
+    .logged-in a:hover {
+        text-decoration: none;
+        color: darkslateblue;
+        color: darkblue;
+    }
 .role-text{
     color: coral;
     font-weight: bold;
@@ -156,8 +164,22 @@ a, .btn-link {
     border-radius: 25px;
 }
 
-.comments li{
+.comments ul {
+    max-height: 200px;
+    overflow-y: auto;
+    scroll-behavior:revert;
+}
+
+.comments li {
     list-style: none;
+    padding: 5px;
+    background-color: #f5f5f5;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    display: block;
+    width: max-content;
+    white-space: nowrap;
 }
 
 .add-comments-section {
@@ -167,7 +189,7 @@ a, .btn-link {
     justify-self: center;
 }
 
-.comments h5 {
+.commets-head-text {
     color: #333;
     text-align: center;
 }
@@ -183,6 +205,7 @@ a, .btn-link {
     padding: 10px;
     border: 1px solid #333;
     margin-right: 10px;
+    border-radius: 10px;
 }
 
 .add-comments-section button {

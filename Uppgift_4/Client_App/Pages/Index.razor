@@ -5,12 +5,11 @@
 @inject AccountService accountService
 @inject TokenService tokenService
 
-<PageTitle>Index</PageTitle>
-
+<PageTitle>Home</PageTitle>
 <h1>Welcome!</h1>
 @if(IsLoggedIn == false)
 {
-    <div class="log-in-form">
+    <div class="mb-5 log-in-form">
         <h3>Log in:</h3>
         <EditForm Model="@user" OnValidSubmit="Login">
             <div class="form-group">
@@ -23,16 +22,16 @@
                 <input @bind="user.Password" class="form-control" />
                 <ValidationMessage For="@(() => user.Password)" />
             </div>
+            <p id="error-message" class="mt-2 text-danger">@errorMessage</p>
             <button type="submit" class="btn btn-primary">Log in</button>
-            <label id="error-message">@errorMessage</label>
         </EditForm>
     </div>
 }
 else
 {
-    <div class="logged-in">
+    <div class="mt-5 logged-in">
         <h3>Logged in as: <span class="role-text">@role</span></h3>
-        <a href="/weather">To weather</a>
+        <a href="/weather">To weather &#9925;</a>
     </div>
 }
 
@@ -60,7 +59,7 @@ else
 
     /// <summary>
     /// Executes the login, if succeeded a token is received and saved and the users role is extracted from the token.
-    /// If log in not successfull no token is recieved and the user gets an error message.
+    /// If login is not successfull no token is recieved and the user gets an error message.
     /// </summary>
     public async Task Login()
     {
@@ -81,7 +80,6 @@ else
             
             await tokenService.AddToken(token);
             role = tokenService.CheckRole(token);
-            navManager.NavigateTo("/weather");
         }
         else
         {

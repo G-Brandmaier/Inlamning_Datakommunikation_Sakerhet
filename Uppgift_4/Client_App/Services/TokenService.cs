@@ -31,8 +31,8 @@ public class TokenService
 
     }
     /// <summary>
-    /// Checks if there is a token in local storage and if it's is still valid.
-    /// If valid, token is returned.
+    /// Checks if there is a token in local storage and if it's still valid.
+    /// If token is valid, return token.
     /// If token is not valid the token is removed from local storage and an empty string is returned.
     /// </summary>
     public async Task<string> CheckTokenValid()
@@ -45,8 +45,6 @@ public class TokenService
             var jsonToken = handler.ReadJwtToken(token);
             var jwtToken = jsonToken as JwtSecurityToken;
             DateTime expirationDate = jsonToken.ValidTo.ToLocalTime();
-            Console.WriteLine(expirationDate);
-
             DateTime dateTimeNow = DateTime.Now.ToLocalTime();
 
             if (dateTimeNow < expirationDate)

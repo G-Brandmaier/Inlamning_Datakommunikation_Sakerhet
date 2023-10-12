@@ -21,9 +21,9 @@ public class AccountController : ControllerBase
     }
 
     /// <summary>
-    /// Excectution of the log in and returning of authentication token.
+    /// Excectution of the login and returning of authentication token.
     /// Takes a UserDto for reference with the data.
-    /// Returns token if log in is successfull otherwise Unauthorized or BadRequest.s
+    /// Returns token if login is successfull otherwise Unauthorized or BadRequest.
     /// </summary>
     [HttpPost("/login")]
     public async Task<IActionResult> Login(UserDto user)
